@@ -1,0 +1,119 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-brown;
+  color: #fff;
+  height: 8.2rem;
+  padding: 1rem;
+  font: $font-regular;
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+
+    & > li {
+      margin: 0 3rem;
+      align-items: center;
+    }
+  }
+
+  &__label {
+    display: none;
+    height: 3.5rem;
+    width: 3.5rem;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-dark-green;
+  }
+
+  &__button,
+  &__button::before,
+  &__button::after {
+    display: block;
+    background-color: $color-white;
+    position: absolute;
+    height: 0.4rem;
+    width: 3rem;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 0.2rem;
+  }
+
+  &__button::before {
+    content: "";
+    margin-top: -0.8rem;
+  }
+
+  &__button::after {
+    content: "";
+    margin-top: 0.8rem;
+  }
+
+  &__toggle {
+    display: none;
+
+    &:checked + .nav__label .nav__button::before {
+      margin-top: 0px;
+      transform: rotate(405deg);
+    }
+
+    &:checked + .nav__label .nav__button {
+      background: $color-dark-black;
+    }
+
+    &:checked + .nav__label .nav__button::after {
+      margin-top: 0px;
+      transform: rotate(-405deg);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .nav {
+    justify-content: flex-end;
+    &__label {
+      display: flex;
+    }
+    &__menu {
+      position: absolute;
+      top: 0;
+      margin-top: 8rem;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      & > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5rem 0;
+        width: 100%;
+        color: white;
+        background-color: $color-dark-black;
+        overflow: hidden;
+      }
+    }
+    &__toggle ~ .nav__menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    &__toggle:checked ~ .nav__menu li {
+      border: 0.1rem solid $color-light-black;
+      height: 2.5rem;
+      padding: 5rem;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  }
+}

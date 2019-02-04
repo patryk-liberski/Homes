@@ -1,0 +1,30 @@
+#paginationButtons {
+  margin-bottom: 3rem;
+
+  & input {
+    transition: all 0.3s;
+    border: 0.1rem solid $color-light-gray-4;
+    padding: 0.8rem 1.4rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 3rem;
+
+    &:not(.active) {
+      background-color: $color-light-gray-2;
+      color: $color-light-gray-3;
+    }
+
+    &:hover:not(.active) {
+      background-color: $color-light-gray-4;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.active {
+  background-color: $color-light-green;
+  color: $color-white;
+}

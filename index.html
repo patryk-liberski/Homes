@@ -1,0 +1,491 @@
+<!doctype html>
+
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projekt</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="nav">
+            <input class="nav__toggle" id="nav__toggle" type="checkbox" />
+            <label class='nav__label' for="nav__toggle">
+                <img class="arrow down-arrow" src="" alt="">
+            </label>
+            <ul class="nav__menu">
+                <li><a href="#">Inwestycja</a></li>
+                <li><a href="#table">Dostępność</a></li>
+                <li><a href="#projection">Rzuty mieszkań</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- GALLERY -->
+    <div class="gallery">
+        <div class="gallery__slider">
+            <div onclick="plusSlides(-1)" class="gallery__button leftArrow"><img src="img/left-arrow.png"></div>
+            <div onclick="plusSlides(1)" class="gallery__button rightArrow"><img src="img/right-arrow.png"></div>
+            <div class="gallery__captionHolder">
+                <p class="gallery__captionText gallery__captionText--fromTop"></p>
+            </div>
+            <div class="gallery__imageHolder">
+                <img src="img/slider-photo.png">
+                <p class="gallery__captionText">ul. Królewska Kraków</p>
+            </div>
+            <div class="gallery__imageHolder">
+                <img src="img/slider-photo.png">
+                <p class="gallery__captionText">ul. Marszałkowska Warszawa</p>
+            </div>
+            <div class="gallery__imageHolder">
+                <img src="img/slider-photo.png">
+                <p class="gallery__captionText">ul. Szlak Kraków</p>
+            </div>
+            <div class="gallery__imageHolder">
+                <img src="img/slider-photo.png">
+                <p class="gallery__captionText">ul. Nowogrodzka Warszawa</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+        <div class="dropdown__column">
+            <div class="dropdown__selectBox">
+                <div class="dropdown__selectContainer">
+                    <select>
+                        <option>kondygnacja</option>
+                    </select>
+                    <img src="" class="arrow down-arrow" alt="">
+                </div>
+
+                <div class="dropdown__overSelect"></div>
+            </div>
+
+            <div class="dropdown__checkBox">
+                <div class="dropdown__checkBox-container">
+                    <span class="dropdown__input">
+                        <input type="checkbox" id="one">
+                        <label for="one"></label>
+                    </span>
+                    <span class="dropdown__text">
+                        <span>parter</span>
+                    </span>
+                </div>
+                <div class="dropdown__checkBox-container">
+                    <span class="dropdown__input">
+                        <input type="checkbox" id="two">
+                        <label for="two"></label>
+                    </span>
+                    <span class="dropdown__text">
+                        <span>piętro</span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dropdown__column">
+            <div class="dropdown__selectBox">
+                <div class="dropdown__selectContainer">
+                    <select>
+                        <option>ogródek/strych</option>
+                    </select>
+                    <img src="" class="arrow down-arrow" alt="">
+                </div>
+
+                <div class="dropdown__overSelect"></div>
+            </div>
+
+            <div class="dropdown__checkBox">
+                <div class="dropdown__checkBox-container">
+                    <span class="dropdown__input">
+                        <input type="checkbox" id="three">
+                        <label for="three"></label>
+                    </span>
+                    <span class="dropdown__text">
+                        <span>ogródek</span>
+                    </span>
+                </div>
+                <div class="dropdown__checkBox-container">
+                    <span class="dropdown__input">
+                        <input type="checkbox" id="four">
+                        <label for="four"></label>
+                    </span>
+                    <span class="dropdown__text">
+                        <span>strych</span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dropdown__column">
+            <div class="dropdown__selectBox">
+                <div class="dropdown__selectContainer">
+                    <select>
+                        <option>status</option>
+                    </select>
+                    <img src="" class="arrow down-arrow" alt="">
+                </div>
+
+                <div class="dropdown__overSelect"></div>
+            </div>
+
+            <div class="dropdown__checkBox">
+                <div class="dropdown__checkBox-container">
+                    <span class="dropdown__input">
+                        <input type="checkbox" id="five">
+                        <label for="five"></label>
+                    </span>
+                    <span class="dropdown__text">
+                        <span>wolny</span>
+                    </span>
+                </div>
+                <div class="dropdown__checkBox-container">
+                    <span class="dropdown__input">
+                        <input type="checkbox" id="six">
+                        <label for="six"></label>
+                    </span>
+                    <span class="dropdown__text">
+                        <span>rezerwacja</span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dropdown__column">
+            <div class="dropdown__selectBox">
+                <div class="dropdown__selectContainer">
+                    <select>
+                        <option>cena</option>
+                    </select>
+                    <img src="" class="arrow down-arrow" alt="">
+                </div>
+
+                <div class="dropdown__overSelect"></div>
+            </div>
+
+            <div class="dropdown__checkBox">
+                <div class="dropdown__checkBox-container">
+                    <span class="dropdown__input">
+                        <input type="checkbox" id="seven">
+                        <label for="seven"></label>
+                    </span>
+                    <span class="dropdown__text">
+                        <span>rosnąco</span>
+                    </span>
+                </div>
+                <div class="dropdown__checkBox-container">
+                    <span class="dropdown__input">
+                        <input type="checkbox" id="eight">
+                        <label for="eight"></label>
+                    </span>
+                    <span class="dropdown__text">
+                        <span>malejąco</span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dropdown__column">
+            <input type="button" class="dropdown__button" value="FILTROWANIE">
+        </div>
+    </div>
+
+    <!-- TABLE -->
+    <section class="table-container" id="table">
+        <div id="elem">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>nr budynku mieszkania</th>
+                        <th>kondygnacja</th>
+                        <th>powierzchnia użytkowa</th>
+                        <th>powierzchnia ogródka / strychu</th>
+                        <th>cena brutto</th>
+                        <th>plan</th>
+                        <th>status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>P11 A</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>wolny</td>
+                    </tr>
+                    <tr>
+                        <td>P11 B</td>
+                        <td>piętro</td>
+                        <td>66,57 m<sup>2</sup></td>
+                        <td>strych 15m<sup>2</sup></td>
+                        <td>259 500 zł</td>
+                        <td>pobierz</td>
+                        <td>rezerwacja</td>
+                    </tr>
+                    <tr>
+                        <td>P12 A</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>wolny</td>
+                    </tr>
+                    <tr>
+                        <td>P12 B</td>
+                        <td>piętro</td>
+                        <td>66,57 m<sup>2</sup></td>
+                        <td>strych 15m<sup>2</sup></td>
+                        <td>259 500 zł</td>
+                        <td>pobierz</td>
+                        <td>rezerwacja</td>
+                    </tr>
+                    <tr>
+                        <td>P13 A</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+
+                    <tr>
+                        <td>P13 B</td>
+                        <td>piętro</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+                    <tr>
+                        <td>P14 A</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+                    <tr>
+                        <td>P14 B</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+                    <tr>
+                        <td>P15 A</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+                    <tr>
+                        <td>P15 B</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+                    <tr>
+                        <td>P16 A</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>wolny</td>
+                    </tr>
+                    <tr>
+                        <td>P16 B</td>
+                        <td>piętro</td>
+                        <td>66,57 m<sup>2</sup></td>
+                        <td>strych 15m<sup>2</sup></td>
+                        <td>259 500 zł</td>
+                        <td>pobierz</td>
+                        <td>rezerwacja</td>
+                    </tr>
+                    <tr>
+                        <td>P17 A</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>wolny</td>
+                    </tr>
+                    <tr>
+                        <td>P17 B</td>
+                        <td>piętro</td>
+                        <td>66,57 m<sup>2</sup></td>
+                        <td>strych 15m<sup>2</sup></td>
+                        <td>259 500 zł</td>
+                        <td>pobierz</td>
+                        <td>rezerwacja</td>
+                    </tr>
+                    <tr>
+                        <td>P18 A</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+
+                    <tr>
+                        <td>P18 B</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+                    <tr>
+                        <td>P19 A</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+                    <tr>
+                        <td>P19 B</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+                    <tr>
+                        <td>P20 A</td>
+                        <td>parter</td>
+                        <td>64,32 m<sup>2</sup></td>
+                        <td>ogródek 81m<sup>2</sup></td>
+                        <td>289 500 zł</td>
+                        <td>pobierz</td>
+                        <td>sprzedany</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- PROJECTION -->
+    <section class="projection-container" id="projection">
+        <section class="projection">
+            <div class="projection__view">
+                <img id="scheme" src="/img/scheme.png" alt="">
+            </div>
+            <div class="projection__buttons">
+                <input onclick="document.getElementById('scheme').src='/img/scheme.png'; document.getElementById('projection-desc').src='/img/projection-desc.png';"
+                    type="button" class="button" value="PARTER LEWY">
+                <input onclick="document.getElementById('scheme').src='/img/scheme1.png'; document.getElementById('projection-desc').src='/img/projection-desc1.png';"
+                    type="button" class="button" value="PARTER PRAWY">
+                <input onclick="document.getElementById('scheme').src='/img/scheme2.png'; document.getElementById('projection-desc').src='/img/projection-desc2.png';"
+                    type="button" class="button" value="PIĘTRO LEWE">
+                <input onclick="document.getElementById('scheme').src='/img/scheme3.png'; document.getElementById('projection-desc').src='/img/projection-desc3.png';"
+                    type="button" class="button" value="PIĘTRO PRAWE">
+            </div>
+            <div class="projection__desc">
+                <img id="projection-desc" src="/img/projection-desc.png" alt="">
+            </div>
+        </section>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact__desc">
+            <span class="contact__desc--logo">
+                <span>
+                    <img src="/img/envelope.png" alt="">
+                    <h1>kontakt</h1>
+                </span>
+
+                <img src="/img/logo.png" alt="">
+                <h2>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit neque, reprehenderit hic distinctio
+                    sequi commodi veniam incidunt repellendus ab aut voluptate, iure voluptatum porro voluptatibus
+                    suscipit. Architecto ducimus, quae aperiam.
+                </h2>
+            </span>
+
+            <span class="contact__desc--address">
+                <h2>
+                    Lorem Ipsum Sp. z o. o. <br> 32-020 Kraków, Floriańska 1/1 <br> <br> +48 777 777 777 <br>
+                    kontakt@kontakt.com.pl <br> <br> KRS:0000222 333 <br> NIP:679-222-22-22 <br> REGON:123456789
+                </h2>
+            </span>
+
+        </div>
+
+        <dropform class="dropform">
+            <input class="dropform__toggle" id="dropform__toggle" type="checkbox" />
+            <p class="dropform__text showText">.</p>
+            <label class='dropform__label' for="dropform__toggle">
+
+                <img class="arrow down-arrow" src="" alt="">
+            </label>
+            <ul class="dropform__menu">
+                <li>
+                    <div class="contact__form">
+                        <section id="contact">
+                            <div class="content">
+                                <div id="form">
+                                    <form action="" id="contactForm" method="post">
+
+                                        <input type="text" name="name" class="name" placeholder="imię i nazwisko"
+                                            tabindex=1 />
+
+                                        <input type="text" name="email" class="email" placeholder="e-mail" tabindex=2 />
+                                        <textarea class="message" placeholder="treść wiadomości" tabindex=4></textarea>
+                                        <div class="captcha-container">
+                                            <div id="captcha"></div>
+                                            <input type="text" name="captcha" class="captcha" maxlength="4" size="4"
+                                                placeholder="przepisz" tabindex=3 />
+                                        </div>
+
+                                        <input type="submit" name="submit" value="WYSŁANIE FORMULARZA" class="submit"
+                                            tabindex=5>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </li>
+            </ul>
+        </dropform>
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+.contact {
+  width: 100%;
+  height: 70rem;
+  background: url(/img/contact-background.png) center;
+  box-sizing: border-box;
+  padding: 7.5rem 0 0 37rem;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+  &__desc {
+    color: $color-white;
+    width: 64rem;
+    height: 40rem;
+    display: flex;
+    margin-right: 17rem;
+
+    &--header {
+      grid-area: header;
+    }
+
+    &--logo {
+      grid-area: logo;
+
+      & span {
+        display: flex;
+        margin-bottom: 4rem;
+
+        img {
+          width: 6.8rem;
+          height: 5.1rem;
+          align-self: flex-end;
+        }
+
+        h1 {
+          margin: 3rem 0 0 2rem;
+          border-bottom: solid 0.1rem $color-dark-green;
+          width: 27rem;
+          font: $font-regular-big;
+          text-transform: uppercase;
+        }
+      }
+
+      & h2 {
+        width: 36rem;
+        margin-top: 4rem;
+        font: $font-bold;
+      }
+    }
+
+    &--address {
+      grid-area: address;
+      & h2 {
+        width: 24rem;
+        margin-top: 10rem;
+        margin-left: 4rem;
+        font: $font-bold;
+      }
+    }
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1550px) {
+  .contact {
+    display: inline-block;
+    height: auto;
+    padding: 5rem;
+    height: 105rem;
+
+    &__desc {
+      margin-bottom: 2rem;
+      width: 60rem;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__form {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .contact {
+    min-height: 75rem;
+    padding: 2.5rem 0 0 0;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__form {
+      width: 100%;
+    }
+
+    &__desc {
+      width: 100%;
+      flex-direction: column;
+      margin-right: 0rem;
+
+      &--logo {
+        padding-left: 1.7rem;
+        width: 30rem;
+
+        & h2 {
+          width: 30rem;
+        }
+      }
+
+      &--address {
+        & h2 {
+          margin-top: 3rem;
+          margin-left: 1.7rem;
+        }
+      }
+    }
+  }
+}

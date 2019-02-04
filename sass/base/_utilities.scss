@@ -1,0 +1,15 @@
+.arrow {
+  width: 3.5rem;
+  height: 3.5rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: $color-light-green;
+}
+
+.down-arrow {
+  content: url("/img/down-arrow.png");
+}
+
+.up-arrow {
+  content: url("/img/up-arrow.png");
+}
