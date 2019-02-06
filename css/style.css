@@ -32,10 +32,10 @@ input {
   background-color: #00a671; }
 
 .down-arrow {
-  content: url("/img/down-arrow.png"); }
+  content: url("../img/down-arrow.png"); }
 
 .up-arrow {
-  content: url("/img/up-arrow.png"); }
+  content: url("../img/up-arrow.png"); }
 
 #paginationButtons {
   margin-bottom: 3rem; }
@@ -757,7 +757,7 @@ input {
     margin: 0 0.5rem; } }
 
 .projection-container {
-  background: url("/img/projection-background.png") center;
+  background: url("../img/projection-background.png") center;
   justify-content: center; }
 
 .projection {
@@ -765,7 +765,8 @@ input {
   grid-column-gap: 1rem;
   grid-template-columns: 29.2rem 29.2rem 29.2rem 29.2rem;
   grid-template-rows: auto;
-  grid-template-areas: "view view button button" "view view desc desc";
+  grid-template-areas: "view view button button"
+ "view view desc desc";
   justify-content: center; }
   .projection__view {
     grid-area: view; }
@@ -852,7 +853,7 @@ input {
 .contact {
   width: 100%;
   height: 70rem;
-  background: url(/img/contact-background.png) center;
+  background: url(../img/contact-background.png) center;
   box-sizing: border-box;
   padding: 7.5rem 0 0 37rem;
   display: flex;
